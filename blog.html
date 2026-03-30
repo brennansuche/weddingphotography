@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Photography Blog | Brennan Suche</title>
+  <meta name="description" content="Tips, inspiration, and venue guides for couples planning their wedding in Toronto, Ontario, and across Canada. From Brennan Suche, documentary wedding photographer.">
+  <link rel="canonical" href="https://brennansuche.github.io/weddingphotography/blog.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Playfair+Display:ital,wght@0,300;0,400;1,300;1,400&family=Raleway:wght@200;300;400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --paper: #f0ede8;
+      --paper-dark: #e8e4de;
+      --ink: #1a1816;
+      --ink-mid: rgba(26,24,22,0.55);
+      --ink-faint: rgba(26,24,22,0.1);
+      --black: #0d0b09;
+    }
+    html { scroll-behavior: smooth; overflow-x: hidden; font-size: 16px; }
+    body { font-family: "Raleway", sans-serif; font-weight: 300; background: var(--paper); color: var(--ink); }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 24px 52px; display: flex; justify-content: space-between; align-items: center; transition: background 0.4s, padding 0.4s; }
+    nav.scrolled { background: rgba(13,11,9,0.96); backdrop-filter: blur(12px); padding: 16px 52px; }
+    .nav-logo img { height: 32px; opacity: 0.85; }
+    .nav-links { list-style: none; display: flex; gap: 36px; }
+    .nav-links a { font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(240,237,232,0.7); text-decoration: none; transition: color 0.3s; }
+    .nav-links a:hover { color: #f0ede8; }
+    .nav-inquire { font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(240,237,232,0.7); text-decoration: none; border: 1px solid rgba(240,237,232,0.25); padding: 10px 22px; transition: border-color 0.3s, color 0.3s; }
+    .nav-inquire:hover { border-color: rgba(240,237,232,0.7); color: #f0ede8; }
+    .nav-right { display: flex; align-items: center; gap: 36px; }
+    .blog-hero { background: var(--black); padding: 160px 52px 100px; }
+    .blog-hero-tag { font-size: 0.6rem; letter-spacing: 0.28em; text-transform: uppercase; color: rgba(240,237,232,0.35); margin-bottom: 24px; }
+    .blog-hero h1 { font-family: "Playfair Display", serif; font-size: clamp(2.8rem, 5vw, 4.5rem); font-weight: 300; color: #f0ede8; line-height: 1.1; }
+    .blog-hero h1 em { font-style: italic; }
+    .blog-hero-sub { font-size: 0.78rem; line-height: 2; color: rgba(240,237,232,0.45); max-width: 480px; margin-top: 24px; }
+    .posts-section { padding: 96px 52px 120px; }
+    .posts-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 64px; }
+    .post-card { background: #fff; padding: 48px 40px 52px; border: 1px solid var(--ink-faint); transition: background 0.3s; text-decoration: none; color: inherit; display: block; }
+    .post-card:hover { background: var(--paper-dark); }
+    .post-tag { font-size: 0.58rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink-mid); margin-bottom: 20px; }
+    .post-title { font-family: "Playfair Display", serif; font-size: 1.35rem; font-weight: 400; line-height: 1.35; margin-bottom: 16px; }
+    .post-title em { font-style: italic; }
+    .post-excerpt { font-size: 0.73rem; line-height: 2; color: var(--ink-mid); margin-bottom: 28px; }
+    .post-read { font-size: 0.58rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink); border-bottom: 1px solid var(--ink-faint); padding-bottom: 2px; display: inline-block; transition: border-color 0.3s; }
+    .post-card:hover .post-read { border-color: var(--ink); }
+    .section-label { font-size: 0.6rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--ink-mid); border-top: 1px solid var(--ink-faint); padding-top: 24px; display: inline-block; }
+    footer { background: var(--black); padding: 40px 52px; display: flex; justify-content: space-between; align-items: center; }
+    .footer-copy { font-size: 0.58rem; letter-spacing: 0.14em; color: rgba(240,237,232,0.2); }
+    .footer-links { display: flex; gap: 28px; }
+    .footer-links a { font-size: 0.58rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(240,237,232,0.28); text-decoration: none; transition: color 0.3s; }
+    .footer-links a:hover { color: rgba(240,237,232,0.65); }
+    @media (max-width: 900px) {
+      nav { padding: 20px 24px; }
+      .blog-hero, .posts-section { padding-left: 24px; padding-right: 24px; }
+      .posts-grid { grid-template-columns: 1fr; }
+      footer { flex-direction: column; gap: 16px; padding: 28px 24px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="index.html" class="nav-logo" aria-label="Brennan Suche">
+    <svg width="120" height="18" viewBox="0 0 120 18" fill="none" xmlns="http://www.w3.org/2000/svg"><text x="0" y="14" font-family="Playfair Display, serif" font-style="italic" font-size="15" fill="rgba(240,237,232,0.75)">Brennan Suche</text></svg>
+  </a>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="index.html#work">Work</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#packages">Packages</a></li>
+    </ul>
+    <a href="index.html#contact" class="nav-inquire">Inquire</a>
+  </div>
+</nav>
+
+<section class="blog-hero">
+  <div class="blog-hero-tag">Journal</div>
+  <h1>For couples planning<br><em>something real.</em></h1>
+  <p class="blog-hero-sub">Venue guides, photography tips, and honest advice for couples getting married across Canada.</p>
+</section>
+
+<section class="posts-section">
+  <span class="section-label">All Posts</span>
+  <div class="posts-grid">
+
+    <a class="post-card" href="blog-toronto-wedding-venues.html">
+      <div class="post-tag">Venues &mdash; Ontario</div>
+      <h2 class="post-title">The Best Wedding Venues<br>in <em>Toronto</em> (2026)</h2>
+      <p class="post-excerpt">From grand ballrooms to intimate lofts and sprawling estates — a photographer's honest guide to Toronto's best wedding venues.</p>
+      <span class="post-read">Read more</span>
+    </a>
+
+    <a class="post-card" href="blog-ontario-wedding-venues.html">
+      <div class="post-tag">Venues &mdash; Ontario</div>
+      <h2 class="post-title">Best Wedding Venues<br>Across <em>Ontario</em> (2026)</h2>
+      <p class="post-excerpt">Beyond the city — vineyards, barns, lakeside retreats, and heritage estates across Ontario that make for unforgettable wedding days.</p>
+      <span class="post-read">Read more</span>
+    </a>
+
+    <a class="post-card" href="blog-bc-wedding-venues.html">
+      <div class="post-tag">Venues &mdash; British Columbia</div>
+      <h2 class="post-title">Best Wedding Venues<br>in <em>British Columbia</em> (2026)</h2>
+      <p class="post-excerpt">Mountains, forests, and ocean cliffs — a guide to BC's most stunning wedding venues for couples who want something truly spectacular.</p>
+      <span class="post-read">Read more</span>
+    </a>
+
+  </div>
+</section>
+
+<footer>
+  <div class="footer-copy">&copy; 2026 Brennan Suche Photography &mdash; Toronto, Canada</div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="index.html#contact">Inquire</a>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  });
+</script>
+</body>
+</html>

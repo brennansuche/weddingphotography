@@ -409,6 +409,51 @@ nav.scrolled .nav-inquire:hover { background: var(--ink-mid); }
   justify-content: center;
 }
 
+/* VIDEO */
+.video-section { background: var(--black); padding: 88px 52px; }
+
+.video-section .portfolio-header {
+  padding: 0 0 56px;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+  gap: 3px;
+}
+
+.video-item {
+  position: relative;
+  background: #111;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.video-item iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.video-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(240,237,232,0.18);
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border: 1px solid rgba(240,237,232,0.06);
+}
+
+@media (max-width: 700px) {
+  .video-grid { grid-template-columns: 1fr; }
+  .video-section { padding: 60px 24px; }
+}
+
 .btn-ghost-light {
   display: inline-block;
   padding: 15px 44px;
@@ -792,6 +837,7 @@ nav.scrolled .sig-img { filter: invert(0); }
   <div class="nav-right">
     <ul class="nav-links">
       <li><a href="brennan-suche-portfolio.html">Work</a></li>
+      <li><a href="#video">Film</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#packages">Packages</a></li>
     </ul>
@@ -879,6 +925,25 @@ nav.scrolled .sig-img { filter: invert(0); }
 </section>
 
 
+
+<!-- VIDEO -->
+<section class="video-section" id="video">
+  <div class="portfolio-header reveal">
+    <span class="portfolio-title">Film</span>
+    <span class="portfolio-sub">Wedding Video</span>
+  </div>
+  <div class="video-grid stagger">
+    <!-- To add a video: replace the div below with:
+         Vimeo: <iframe src="https://player.vimeo.com/video/YOUR_VIDEO_ID" allowfullscreen></iframe>
+         YouTube: <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe> -->
+    <div class="video-item">
+      <div class="video-placeholder">Video coming soon</div>
+    </div>
+    <div class="video-item">
+      <div class="video-placeholder">Video coming soon</div>
+    </div>
+  </div>
+</section>
 
 <!-- PACKAGES -->
 <section class="packages" id="packages">
